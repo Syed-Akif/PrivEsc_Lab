@@ -1,0 +1,18 @@
+<group name="linux,privilege_escalation">
+
+  <rule id="200001" level="8">
+    <if_group>sudo_exec</if_group>
+    <description>Sudo command executed</description>
+  </rule>
+
+  <rule id="200002" level="11">
+    <if_group>sudoers_change</if_group>
+    <description>CRITICAL: sudoers file modified</description>
+  </rule>
+
+  <rule id="200003" level="10">
+    <if_group>user_change</if_group>
+    <description>User privilege modified</description>
+  </rule>
+
+</group>
